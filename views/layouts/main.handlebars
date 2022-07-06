@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="">
+    <meta name="description" content="Servicios de marketing digital y posicionamiento en línea para pymes">
+    <meta name="keywords"
+        content="Marketing digital, campañas digitales, redes sociales, contenido digital, diseño web">
+    <link rel="shortcut icon" href="assets/images/logoVilpaLetras.jpg">
+    <script src="https://kit.fontawesome.com/a077a0470e.js" crossorigin="anonymous"></script>
+    <title>Xyncs-Marketing digital</title>
+    
+    
+    <!-- Stylesheet -->
+    <link href="/assets/css/startup-materialize.min.css" rel="stylesheet">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- Stylesheet -->
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/materialize.min.css" rel="stylesheet">
+
+
+    <script>
+        
+    </script>
+    <script>
+        function submitEmailForm(form) {
+
+            var obj = new XMLHttpRequest();
+            obj.onreadystatechange = function () {
+                if (obj.readyState == 4) {
+                    if (obj.status == 200) {
+                        var res = JSON.parse(obj.responseText);
+                        alert(res.message);
+                    }
+                    else {
+                        console.log("XMLHttp status " + obj.status + ": " + obj.statusText);
+                    }
+                }
+            };
+            obj.open("post", form.action, true);
+            obj.setRequestHeader("Content-Type", "application/json"); // NOTICE: "application/json"
+            obj.send(JSON.stringify({ name: form.name.value, email: form.email.value, message: form.message.value }));
+            alert("¡Mensaje enviado con éxito!");
+            $(".formInput").val(" ");
+            return false;
+        }
+    </script>
+    <script>
+        function submitClubForm(form) {
+
+            var obj = new XMLHttpRequest();
+            obj.onreadystatechange = function () {
+                if (obj.readyState == 4) {
+                    if (obj.status == 200) {
+                        var res = JSON.parse(obj.responseText);
+                        alert(res.message);
+                    }
+                    else {
+                        console.log("XMLHttp status " + obj.status + ": " + obj.statusText);
+                    }
+                }
+            };
+            obj.open("post", form.action, true);
+            obj.setRequestHeader("Content-Type", "application/json"); // NOTICE: "application/json"
+            obj.send(JSON.stringify({ name: form.nameClub.value, email: form.emailClub.value, country: form.countryClub.value }));
+            alert("¡Bienvenido a la comunidad. Tu registro ha sido hecho con éxito!");
+            $(".formInput").val(" ");
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+    
+    <div class="bodyPrincipal">
+        {{{body}}}
+    </div>
+    
+
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="assets/js/materialize.min.js"></script>
+
+    <!-- External libraries -->
+    <script src="/assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/js/masonry.pkgd.min.js"></script>
+    <script src="/assets/js/TweenMax.min.js"></script>
+    <script src="/assets/js/ScrollMagic.min.js"></script>
+    <script src="/assets/js/animation.gsap.min.js"></script>
+
+    <!-- Initialization script -->
+    <script src="/assets/js/startup.js"></script>
+    <script src="/assets/js/init.js"></script>
+    
+
+
+</body>
+
+</html>
