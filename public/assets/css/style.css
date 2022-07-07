@@ -1,25 +1,24 @@
-nav {
-    background-color: white !important ;
-    
+.navbar-solid-transition{
+    padding-bottom: 6%;
 }
-.navItems{
+
+.navItems {
     color: black !important;
+}
+
+.logoNegroBg{
+    width: 8% !important;
+    padding: 1%;
+}
+.transitionTitle{
+    margin-top: 10% !important;
 }
 .material-icons{
-    color: black !important;
+    color: white !important;
 }
 
+@media only screen and (min-width : 992px) {}
 
+@media only screen and (max-width : 992px) {}
 
-
-@media only screen and (min-width : 992px) {
-    
-}
-@media only screen and (max-width : 992px) {
-    
-}
-  
-@media only screen and (max-width : 600px) {
-   
-}
-  
+@media only screen and (max-width : 600px) {}
