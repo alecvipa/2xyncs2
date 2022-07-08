@@ -16,8 +16,53 @@
 </head>
 
 <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-solid-transition">
+        <div class="nav-wrapper">
+            <a href="/" class="brand-logo"><img src="/assets/images/logoBlancoTransparent.png" alt="logoNegro"
+                    class="logoNegroBg"></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="/">Inicio</a></li>
+                <li class="active"><a class="dropdown-trigger" href="#!" data-target="pages">Servicios<i
+                            class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a href="/proyectos">Proyectos</a></li>
+                <li><a href="/contato">Contacto</a></li>
 
+            </ul>
 
+            <ul id="pages" class="dropdown-content">
+                <li><a href="/webdesign">Diseño Web</a></li>
+                <li><a href="/socialmedia">Redes sociales</a></li>
+                <li><a href="/digitalcontent">Contenido digital</a></li>
+                <li><a href="/digitalcampaigns">Campañas digitales</a></li>
+
+            </ul>
+
+            <a href="#" data-target="slide-out" class="sidenav-trigger button-collapse right"><i
+                    class="material-icons white-text">menu</i></a>
+        </div>
+    </nav>
+    <ul id="slide-out" class="sidenav">
+        <li><a href="/">Inicio</a></li>
+        <li class="no-padding">
+            <ul class="collapsible collapsible-accordion">
+                <li class="bold">
+                    <a class="collapsible-header waves-effect waves-teal active">Servicios<i
+                            class="material-icons right">arrow_drop_down</i></a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="/webdesign">Diseño Web</a></li>
+                            <li><a href="/socialmedia">Redes sociales</a></li>
+                            <li><a href="/digitalcontent">Contenido digital</a></li>
+                            <li><a href="/digitalcampaigns">Campañas digitales</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li><a href="/proyectos">Proyectos</a></li>
+        <li><a href="/contato">Contacto</a></li>
+    </ul>
     <div class="bodyPrincipal">
         {{{body}}}
     </div>
