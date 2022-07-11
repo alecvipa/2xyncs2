@@ -36,7 +36,20 @@
     "node-sass": "^3.4.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "author": "Alan Chang"
+  "author": "Alan Chang",
+  "bin": {
+    "startup": "materialize.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alecvipa/2xyncs2.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alecvipa/2xyncs2/issues"
+  },
+  "homepage": "https://github.com/alecvipa/2xyncs2#readme"
 }
