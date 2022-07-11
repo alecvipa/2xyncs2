@@ -6,6 +6,7 @@
 
 .navItems {
     color: black !important;
+    
 }
 .textSomos{
     font-size: 25px;
@@ -32,8 +33,21 @@
   margin-right: auto;
   width: 60%;
 }
+.textWthite{
+    color:  #fabab2 !important;
+}
+.textRealWhite{
+    color: white !important;
+}
+.textBlack{
+    color: black !important;
+}
 
-@media only screen and (min-width : 992px) {}
+@media only screen and (min-width : 992px) {
+    .nOlvidar{
+        margin-bottom: 100%;
+    }
+}
 
 @media only screen and (max-width : 991px) {
     .logoNegroBg{
