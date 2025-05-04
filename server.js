@@ -25,21 +25,57 @@ app.engine("handlebars", exphbs.engine({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Redirect to https://xyncs.com
-const targetBaseUrl = 'https://www.xyncs.com/inicio';
+// const targetBaseUrl = 'https://www.xyncs.com/inicio';
 
 
 
 // Routes
 app.get('/', function (req, res) {
-    res.redirect(targetBaseUrl);
-    // res.render('inicio')
+    // res.redirect(targetBaseUrl);
+    res.render('inicio');
 
 });
-app.get('/:params?', function (req, res) {
-    var params = req.params.params;
-    res.render(params);
-})
+// app.get('/:params?', function (req, res) {
+//     var params = req.params.params;
+//     res.render(params);
+// })
 
+app.get('/teamBuildings', function (req, res) {
+    res.render('teamBuildings');
+
+});
+app.get('/gracias', function (req, res) {
+    res.render('gracias');
+
+});
+app.get('/campaigns', function (req, res) {
+    res.render('campaigns');
+
+});
+app.get('/contacto', function (req, res) {
+    res.render('contacto');
+
+});
+app.get('/digital', function (req, res) {
+    res.render('digital');
+
+});
+app.get('/inicio', function (req, res) {
+    res.render('inicio');
+
+});
+app.get('/privacidad', function (req, res) {
+    res.render('privacidad');
+
+});
+app.get('/proyectos', function (req, res) {
+    res.render('proyectos');
+
+});
+app.get('/webdesign', function (req, res) {
+    res.render('webdesign');
+
+});
 
 // Nodemailer route
 
@@ -63,7 +99,7 @@ app.post("/ajax/email", function (request, response) {
     var mail = {
         from: '"Team: Xyncs Web Studio',
         to: 'hebrit_626@hotmail.com',
-        subject: '¡Alguien ha llenado el formulario de contacto, Alejandro Vilpa!',
+        subject: '¡Alguien ha llenado el formulario de contacto en Xyncs Web Studio!',
         html: htmlBody
     };
     transporter.sendMail(mail, function (err, info) {
@@ -75,7 +111,7 @@ app.post("/ajax/email", function (request, response) {
     });
 });
 
-app.post("/club/email", function (request, response) {
+app.post("/inicio/email", function (request, response) {
     console.log(email);
     const transporter = nodemailer.createTransport({
         service: 'gmail',
@@ -91,7 +127,7 @@ app.post("/club/email", function (request, response) {
     });
 
     var textBody = `FROM: ${request.body.name}; EMAIL: ${request.body.email}; MESSAGE: ${request.body.message}`;
-    var htmlBody = `<h2>Correo de contacto</h2><p>Nombre: ${request.body.name} </p> <p> Correo electrónico: <a href='mailto: ${request.body.email}'>${request.body.email}</a></p><p>País: ${request.body.country} </p>`;
+    var htmlBody = `<h2>Correo de contacto</h2><p>Nombre: ${request.body.name} </p> <p> Correo electrónico: <a href='mailto: ${request.body.email}'>${request.body.email}</a></p><p>Message: ${request.body.message} </p>`;
     var mail = {
         from: '"Team: Xyncs Web Studio',
         to: 'hebrit_626@hotmail.com',
