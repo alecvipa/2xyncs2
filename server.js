@@ -40,8 +40,8 @@ app.get('/', function (req, res) {
 //     res.render(params);
 // })
 
-app.get('/teamBuildings', function (req, res) {
-    res.render('teamBuildings');
+app.get('/privacidad', function (req, res) {
+    res.render('privacidad');
 
 });
 app.get('/gracias', function (req, res) {
