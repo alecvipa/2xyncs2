@@ -44,38 +44,12 @@ app.get('/privacidad', function (req, res) {
     res.render('privacidad');
 
 });
-app.get('/gracias', function (req, res) {
-    res.render('gracias');
-
-});
-app.get('/campaigns', function (req, res) {
-    res.render('campaigns');
-
-});
-app.get('/contacto', function (req, res) {
-    res.render('contacto');
-
-});
-app.get('/digital', function (req, res) {
-    res.render('digital');
-
-});
 app.get('/inicio', function (req, res) {
+    // res.redirect(targetBaseUrl);
     res.render('inicio');
 
 });
-app.get('/privacidad', function (req, res) {
-    res.render('privacidad');
 
-});
-app.get('/proyectos', function (req, res) {
-    res.render('proyectos');
-
-});
-app.get('/webdesign', function (req, res) {
-    res.render('webdesign');
-
-});
 
 // Nodemailer route
 
